@@ -1,5 +1,6 @@
 const toggleButton = document.getElementById("toggle-button");
 
+// handle close/open extension side bar when toggling the toggle button
 toggleButton.addEventListener("click", () => {
   chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
     const tab = tabs[0];
